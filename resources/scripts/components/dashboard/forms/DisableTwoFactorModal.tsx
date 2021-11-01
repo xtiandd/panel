@@ -43,7 +43,7 @@ const DisableTwoFactorModal = () => {
                 password: '',
             }}
             validationSchema={object().shape({
-                password: string().required('You must provide your current password in order to continue.'),
+                password: string().required('您必须提供当前密码才能继续。'),
             })}
         >
             {({ isValid }) => (
@@ -53,13 +53,13 @@ const DisableTwoFactorModal = () => {
                         id={'password'}
                         name={'password'}
                         type={'password'}
-                        label={'Current Password'}
-                        description={'In order to disable two-factor authentication you will need to provide your account password.'}
+                        label={'当前密码'}
+                        description={'为了禁用双因素身份验证，您需要提供您的帐户密码。'}
                         autoFocus
                     />
                     <div css={tw`mt-6 text-right`}>
                         <Button color={'red'} disabled={!isValid}>
-                            Disable Two-Factor
+                            关闭双因素身份验证
                         </Button>
                     </div>
                 </Form>
