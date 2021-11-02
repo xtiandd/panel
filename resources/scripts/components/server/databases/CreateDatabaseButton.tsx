@@ -18,13 +18,13 @@ interface Values {
 
 const schema = object().shape({
     databaseName: string()
-        .required('A database name must be provided.')
-        .min(3, 'Database name must be at least 3 characters.')
-        .max(48, 'Database name must not exceed 48 characters.')
-        .matches(/^[A-Za-z0-9_\-.]{3,48}$/, 'Database name should only contain alphanumeric characters, underscores, dashes, and/or periods.'),
+        .required('必须提供数据库名称。')
+        .min(3, '数据库名称必须至少为 3 个字符。')
+        .max(48, '数据库名称不得超过 48 个字符。')
+        .matches(/^[A-Za-z0-9_\-.]{3,48}$/, '数据库名称应仅包含字母数字字符、下划线、破折号和/或句点。'),
     connectionsFrom: string()
-        .required('A connection value must be provided.')
-        .matches(/^([0-9]{1,3}|%)(\.([0-9]{1,3}|%))?(\.([0-9]{1,3}|%))?(\.([0-9]{1,3}|%))?$/, 'A valid connection address must be provided.'),
+        .required('必须提供连接值。')
+        .matches(/^([0-9]{1,3}|%)(\.([0-9]{1,3}|%))?(\.([0-9]{1,3}|%))?(\.([0-9]{1,3}|%))?$/, '必须提供有效的连接地址。'),
 });
 
 export default () => {
@@ -72,16 +72,16 @@ export default () => {
                                     type={'string'}
                                     id={'database_name'}
                                     name={'databaseName'}
-                                    label={'Database Name'}
-                                    description={'A descriptive name for your database instance.'}
+                                    label={'数据库名'}
+                                    description={'数据库实例的描述性名称。'}
                                 />
                                 <div css={tw`mt-6`}>
                                     <Field
                                         type={'string'}
                                         id={'connections_from'}
                                         name={'connectionsFrom'}
-                                        label={'Connections From'}
-                                        description={'Where connections should be allowed from. Use % for wildcards.'}
+                                        label={'连接白名单'}
+                                        description={'允许连接的IP地址。 使用 % 作为通配符。'}
                                     />
                                 </div>
                                 <div css={tw`flex flex-wrap justify-end mt-6`}>
@@ -91,10 +91,10 @@ export default () => {
                                         css={tw`w-full sm:w-auto sm:mr-2`}
                                         onClick={() => setVisible(false)}
                                     >
-                                        Cancel
+                                        取消
                                     </Button>
                                     <Button css={tw`w-full mt-4 sm:w-auto sm:mt-0`} type={'submit'}>
-                                        Create Database
+                                        创建数据库
                                     </Button>
                                 </div>
                             </Form>
@@ -103,7 +103,7 @@ export default () => {
                 }
             </Formik>
             <Button onClick={() => setVisible(true)}>
-                New Database
+                新数据库
             </Button>
         </>
     );
