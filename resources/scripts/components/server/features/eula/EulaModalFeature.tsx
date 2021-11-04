@@ -21,7 +21,7 @@ const EulaModalFeature = () => {
         if (!connected || !instance || status === 'running') return;
 
         const listener = (line: string) => {
-            if (line.toLowerCase().indexOf('你需要同意 Mojang.AB 的 EULA 协议后才能继续！') >= 0) {
+            if (line.toLowerCase().indexOf('you need to agree to the eula in order to run the server') >= 0) {
                 setVisible(true);
             }
         };
