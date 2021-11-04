@@ -78,7 +78,7 @@ const AllocationRow = ({ allocation }: Props) => {
                 <InputSpinner visible={loading}>
                     <Textarea
                         css={tw`bg-neutral-800 hover:border-neutral-600 border-transparent`}
-                        placeholder={'Notes'}
+                        placeholder={'备注'}
                         defaultValue={allocation.notes || undefined}
                         onChange={e => setAllocationNotes(e.currentTarget.value)}
                     />
