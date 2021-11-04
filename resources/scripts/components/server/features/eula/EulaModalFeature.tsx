@@ -70,7 +70,7 @@ const EulaModalFeature = () => {
                     href="https://account.mojang.com/documents/minecraft_eula"
                 >
                         Minecraft&reg; EULA 协议
-                </a>.
+                </a>。 否则服务器将无法正常启动。
             </p>
             <div css={tw`mt-8 sm:flex items-center justify-end`}>
                 <Button isSecondary onClick={() => setVisible(false)} css={tw`w-full sm:w-auto border-transparent`}>
