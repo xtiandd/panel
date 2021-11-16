@@ -25,7 +25,7 @@ export default ({ schedule }: { schedule: Schedule }) => (
                     schedule.isActive ? tw`bg-green-600` : tw`bg-neutral-400`,
                 ]}
             >
-                {schedule.isActive ? '已激活' : '未激活'}
+                {schedule.isActive ? '正在运行' : '未在运行'}
             </p>
         </div>
         <ScheduleCronRow cron={schedule.cron} css={tw`mx-auto sm:mx-8 w-full sm:w-auto mt-4 sm:mt-0`}/>
@@ -39,7 +39,7 @@ export default ({ schedule }: { schedule: Schedule }) => (
                 {schedule.isProcessing ?
                     '正在处理'
                     :
-                    schedule.isActive ? '已激活' : '未激活'
+                    schedule.isActive ? '正在运行' : '未在运行'
                 }
             </p>
         </div>
