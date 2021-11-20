@@ -74,7 +74,7 @@ export default ({ database, className }: Props) => {
                             }}
                         >
                             <FlashMessageRender byKey={'database:delete'} css={tw`mb-6`}/>
-                            <h2 css={tw`text-2xl mb-6`}>Confirm database deletion</h2>
+                            <h2 css={tw`text-2xl mb-6`}>数据库删除确认</h2>
                             <p css={tw`text-sm`}>
                                 删除数据库是一项永久性操作，无法撤消。 这将永久删除 <strong>{database.name}</strong> 数据库并删除所有相关数据。
                             </p>
