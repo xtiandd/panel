@@ -66,7 +66,7 @@ export default () => {
                             }}
                         >
                             <FlashMessageRender byKey={'database:create'} css={tw`mb-6`}/>
-                            <h2 css={tw`text-2xl mb-6`}>Create new database</h2>
+                            <h2 css={tw`text-2xl mb-6`}>创建新数据库</h2>
                             <Form css={tw`m-0`}>
                                 <Field
                                     type={'string'}
@@ -81,7 +81,7 @@ export default () => {
                                         id={'connections_from'}
                                         name={'connectionsFrom'}
                                         label={'连接白名单'}
-                                        description={'允许连接的IP地址。 使用 % 作为通配符。'}
+                                        description={'允许连接的IP地址。 使用 % 表示允许任何IP地址连接到此数据库。'}
                                     />
                                 </div>
                                 <div css={tw`flex flex-wrap justify-end mt-6`}>
