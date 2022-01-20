@@ -34,7 +34,7 @@ x-common:
 #
 services:
   database:
-    image: library/mysql:8.0
+    image: mariadb:10.5
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     volumes:
@@ -70,6 +70,7 @@ services:
       QUEUE_DRIVER: "redis"
       REDIS_HOST: "cache"
       DB_HOST: "database"
+      DB_PORT: "3306"
 networks:
   default:
     ipam:

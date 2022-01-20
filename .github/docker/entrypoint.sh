@@ -55,9 +55,14 @@ else
   rm -rf /etc/nginx/http.d/default.conf
 fi
 
+if [[ -z $DB_PORT ]]; then
+  echo -e "DB_PORT not specified, defaulting to 3306"
+  DB_PORT=3306
+fi
+
 ## check for DB up before starting the panel
 echo "Checking database status."
-until nc -z -v -w30 $DB_HOST 3306
+until nc -z -v -w30 $DB_HOST $DB_PORT
 do
   echo "Waiting for database connection..."
   # wait for 1 seconds before check again
