@@ -41,7 +41,7 @@ const ConflictStateRenderer = () => {
             <ScreenBlock
                 title={'正在运行安装程序'}
                 image={ServerInstallSvg}
-                message={'我们的服务器应该很快就准备好了，请几分钟后再试。'}
+                message={'此服务器应该很快就准备好了，请几分钟后再试。'}
             />
             :
             status === 'suspended' ?
